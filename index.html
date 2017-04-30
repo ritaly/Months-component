@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="./css/style.css ">
+<link rel="stylesheet" href="./style.css ">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
 <body>
@@ -11,32 +11,25 @@
     <header>
       <h1>Summer e-xperience </h1>
     </header>
-    <p>Wybierz miesiąc</p>
-    <div ng-app="Months" ng-controller="monthCtrl">
-      <select class="form-control" ng-model="selectedName" ng-options="x for x in months">
-      </select>
+    <div class="form-group">
+      <select class="form-control" id="months">
+      <label for="a">Wybierz miesiąc:</label>
+      <option value="" selected disabled>Miesiąc</option>
+      <option>Styczeń</option>
+      <option>Luty</option>
+      <option>Marzec</option>
+      <option>Kwiecień</option>
+      <option>Maj</option>
+      <option>Czerwiec</option>
+      <option>Lipiec</option>
+      <option>Sierpień</option>
+      <option>Wrzesień</option>
+      <option>Październik</option>
+      <option>Listopad</option>
+      <option>Grudzień</option>
+    </select>
     </div>
 
-    </div>
-    <script>
-      var app = angular.module('Months', []);
-      app.controller('monthCtrl', function($scope) {
-        $scope.months = [
-          "Styczeń",
-          "Luty",
-          "Marzec",
-          "Kwiecień",
-          "Maj",
-          "Czerwiec",
-          "Lipiec",
-          "Sierpień",
-          "Wrzesień",
-          "Październik",
-          "Listopad",
-          "Grudzień"
-        ];
-      });
-    </script>
 </body>
 
 </html>
