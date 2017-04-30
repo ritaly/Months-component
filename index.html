@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="./style.css ">
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="./style.min.css">
+</head>
 
 <body>
   <main class="container">
     <header>
       <h1>Summer e-xperience </h1>
     </header>
-    <div class="form-group">
-      <select class="form-control" id="months">
-      <label for="a">Wybierz miesiąc:</label>
-      <option value="" selected disabled>Miesiąc</option>
-      <option>Styczeń</option>
-      <option>Luty</option>
-      <option>Marzec</option>
-      <option>Kwiecień</option>
-      <option>Maj</option>
-      <option>Czerwiec</option>
-      <option>Lipiec</option>
-      <option>Sierpień</option>
-      <option>Wrzesień</option>
-      <option>Październik</option>
-      <option>Listopad</option>
-      <option>Grudzień</option>
-    </select>
-    </div>
-
+    <form class="form-horizontal">
+      <div class="form-group col-sm-8">
+        <label for="date">Wybierz miesiąc:</label>
+        <select required class="form-control selectpicker arrow" title="Miesiąc">
+          <option>Styczeń</option>
+          <option>Luty</option>
+          <option>Marzec</option>
+          <option>Kwiecień</option>
+          <option>Maj</option>
+          <option>Czerwiec</option>
+          <option>Lipiec</option>
+          <option>Sierpień</option>
+          <option>Wrzesień</option>
+          <option>Październik</option>
+          <option>Listopad</option>
+          <option>Grudzień</option>
+      </select>
+      </div>
+    </form>
+  </main>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
 </body>
 
 </html>

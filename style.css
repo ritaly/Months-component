@@ -1,9 +1,0 @@
-select option {
-	color: black;
-}
-select option:first-child {
-	color: grey;
-}
-select option[disabled]:first-child {
-	display: none;
-}
