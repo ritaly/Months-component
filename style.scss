@@ -1,5 +1,6 @@
 @import url( 'https://fonts.googleapis.com/css?family=Dosis:400,700');
 $grey: #898989;
+$darkgrey: #737373;
 
 body {
   margin: 0;
@@ -10,9 +11,17 @@ h1 {
   font-family: 'Dosis', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 1em;
+  padding: 1em 0;
+  color: #FF5A00;
 }
 
+.form-group {
+  margin: 1.5em 0;
+}
+
+div[disabled]{
+  color: $grey;
+}
 .btn-default {
   padding: 10px 15px;
   font-size: 16px;
@@ -20,9 +29,15 @@ h1 {
   box-shadow: none;
   border-radius: 2px;
   line-height: 1.6;
+
+  &:not(.disabled):hover {
+    background-color: transparent;
+    border: 2px solid $darkgrey;
+    color: $darkgrey;
+  }
 }
 
-.bootstrap-select > .dropdown-toggle {
+.bootstrap-select > .dropdown-toggle.bs-placeholder{
   padding-right: 30px;
   color: $grey;
 
