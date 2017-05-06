@@ -15,17 +15,24 @@ h1 {
   color: #FF5A00;
 }
 
+*:active,
+*:focus,
+.bootstrap-select .dropdown-toggle:focus,
+a:focus {
+  outline: none !important;
+}
+
 .form-group {
   margin: 1.5em 0;
 }
 
-div[disabled]{
+div[disabled] {
   color: $grey;
 }
+
 .btn-default {
   padding: 10px 15px;
   font-size: 16px;
-  border: 1px solid #e8e8e8;
   box-shadow: none;
   border-radius: 2px;
   line-height: 1.6;
@@ -37,16 +44,65 @@ div[disabled]{
   }
 }
 
-.bootstrap-select > .dropdown-toggle.bs-placeholder{
-  padding-right: 30px;
-  color: $grey;
+.btn-group.open {
+  .dropdown-toggle {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
 
-  .bs-caret:after {
-    font-family: 'Glyphicons Halflings';
-    content: "\e259";
+.open > .dropdown-toggle.btn-default,
+.open > .dropdown-toggle.btn-default:focus,
+.open > .dropdown-toggle.btn-default:hover {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.bootstrap-select {
+  & > .dropdown-toggle {
+    padding-right: 30px;
+    color: $grey;
+
+    .bs-caret:after {
+      font-family: 'Glyphicons Halflings';
+      content: "\e259";
+    }
+
+    span.caret {
+      display: none;
+    }
   }
 
-  span.caret {
-    display: none;
+  &.open .bs-caret::after {
+    content: "\e260";
+  }
+
+  &.btn-group .dropdown-menu {
+    margin-top: -2.5em;
+    border: 2px solid $darkgrey;
+    border-radius: 2px;
+    background: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+    li:not(:first-of-type) {
+      background: #fff;
+    }
+
+    li a {
+      padding: 10px 16px;
+      color: $grey;
+      font-size: 16px;
+
+      &:focus,
+      &:hover {
+        color: #000;
+        background: transparent;
+      }
+
+      span {
+        background: #fff;
+      }
+    }
   }
 }
