@@ -16,7 +16,6 @@
     </header>
     <form class="form-horizontal">
       <div class="form-group col-sm-8">
-        <label for="date">Wyłączone: </label>
         <select required class="form-control selectpicker arrow" disabled title="Miesiąc">
           <option>Styczeń</option>
           <option>Luty</option>
@@ -32,8 +31,8 @@
           <option>Grudzień</option>
       </select>
       </div>
+
       <div class="form-group col-sm-8">
-        <label for="date">Puste: </label>
         <select required class="form-control selectpicker arrow" title="Miesiąc">
           <option>Styczeń</option>
           <option>Luty</option>
@@ -48,29 +47,30 @@
           <option>Listopad</option>
           <option>Grudzień</option>
       </select>
-      </div>
-      <div class="form-group col-sm-8">
-        <label for="date">Błędne: </label>
-        <select required class="form-control selectpicker arrow" id="inputError"  title="Miesiąc">
-          <option>Styczeń</option>
-          <option>Luty</option>
-          <option>Marzec</option>
-          <option>Kwiecień</option>
-          <option>Maj</option>
-          <option>Czerwiec</option>
-          <option>Lipiec</option>
-          <option>Sierpień</option>
-          <option>Wrzesień</option>
-          <option>Październik</option>
-          <option>Listopad</option>
-          <option>Grudzień</option>
-      </select>
+        <p id="warning"></p>
       </div>
     </form>
   </main>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+  <script>
+    $('.selectpicker').on('changed.bs.select', function(e) {
+      var temp = $(this).closest('.bootstrap-select');
+      temp.addClass("success");
+      $('p#warning').text('');
+      $('p#warning').removeAttr('id');
+      var button = temp.children('button');
+      var selectedMonth = button.attr("title");
+      $("#month").remove();
+      button.prepend('<span id="month">'+ selectedMonth +'</span>');
+      button.children('span.filter-option').text("Miesiąc");
+    });
+    $('.selectpicker').on('shown.bs.select', function(e) {
+      $(this).closest('.bootstrap-select').addClass("error");
+      $('p#warning').text('Wybierz miesiąc');
+    });
+  </script>
 </body>
 
 </html>
