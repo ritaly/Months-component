@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<html lang="pl">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -61,7 +63,7 @@
       var button = temp.children('button');
       var selectedMonth = button.attr("title");
       $("#month").remove();
-      button.prepend('<span id="month">'+ selectedMonth +'</span>');
+      button.prepend('<span id="month">' + selectedMonth + '</span>');
       button.children('span.filter-option').text("Miesiąc");
     });
     $('.selectpicker').on('shown.bs.select', function(e) {
