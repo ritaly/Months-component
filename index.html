@@ -16,24 +16,7 @@
     </header>
     <form class="form-horizontal">
       <div class="form-group col-sm-8">
-        <select required class="form-control selectpicker arrow" disabled title="Miesiąc">
-          <option>Styczeń</option>
-          <option>Luty</option>
-          <option>Marzec</option>
-          <option>Kwiecień</option>
-          <option>Maj</option>
-          <option>Czerwiec</option>
-          <option>Lipiec</option>
-          <option>Sierpień</option>
-          <option>Wrzesień</option>
-          <option>Październik</option>
-          <option>Listopad</option>
-          <option>Grudzień</option>
-      </select>
-      </div>
-
-      <div class="form-group col-sm-8">
-        <select required class="form-control selectpicker arrow" title="Miesiąc">
+        <select class="form-control selectpicker arrow example" disabled title="Miesiąc">
           <option>Styczeń</option>
           <option>Luty</option>
           <option>Marzec</option>
@@ -50,27 +33,22 @@
         <p id="warning"></p>
       </div>
     </form>
+    <div class="form-group col-sm-4">
+      <button class="btn-switch ex-enable"> Włącz</button>
+      <button class="btn-switch ex-disable">Wyłącz</button>
+
+    </div>
   </main>
+  <div id="test">
+  </div>
   <script src="./js/jquery.min.js"></script>
   <script src="./js/bootstrap.min.js"></script>
   <script src="./js/bootstrap-select.min.js"></script>
+  <script src="./js/functions.js"></script>
   <script>
-    $('.selectpicker').on('changed.bs.select', function(e) {
-      var temp = $(this).closest('.bootstrap-select');
-      temp.addClass("success");
-      $('p#warning').text('');
-      $('p#warning').removeAttr('id');
-      var button = temp.children('button');
-      var selectedMonth = button.attr("title");
-      $("#month").remove();
-      button.prepend('<span id="month">' + selectedMonth + '</span>');
-      button.children('span.filter-option').text("Miesiąc");
-    });
-    $('.selectpicker').on('shown.bs.select', function(e) {
-      $(this).closest('.bootstrap-select').addClass("error");
-      $('p#warning').text('Wybierz miesiąc');
-    });
+
   </script>
+
 </body>
 
 </html>
