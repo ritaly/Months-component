@@ -8,12 +8,10 @@ $('.selectpicker').on('changed.bs.select', function(e) {
   $("#month").remove();
   button.prepend('<span id="month">' + selectedMonth + '</span>');
   button.children('span.filter-option').text("Miesiąc");
-  //user-agent Mozilla - naprawia problem z transitionY
   if (navigator.userAgent.indexOf("Firefox") > 0) {
-                button.children('span.filter-option').css("margin-top", "-24px");
-                button.children('span#month').css("margin-left","0.1em")
-
-            }
+    button.children('span.filter-option').css("margin-top", "-24px");
+    button.children('span#month').css("margin-left", "0.1em")
+  }
 });
 $('.selectpicker').on('shown.bs.select', function(e) {
   $(this).closest('.bootstrap-select').addClass("error");
