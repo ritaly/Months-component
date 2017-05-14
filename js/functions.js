@@ -14,20 +14,23 @@ $('.selectpicker').on('shown.bs.select', function(e) {
   $('p#warning').text('Wybierz miesiąc');
 });
 //wlacz-wylacz
-$('.ex-disable').click(function() {
-  var button = $('.selectpicker').closest('.bootstrap-select').find('button');
-  var html = button.html();
-  $('select.example').prop('disabled', true);
-  $('p#warning').text('');
-  $('.bootstrap-select').removeClass('error');
-  $('select.example').selectpicker('refresh');
-  button.html(html);
-});
+$('.switch').on('click', function() {
+  if ($(this).children().is(':checked')) {
+    $(this).addClass('active');
+    var button = $('.selectpicker').closest('.bootstrap-select').find('button');
+    var html = button.html();
+    $('.example').prop('disabled', false);
+    $('.example').selectpicker('refresh');
+    button.html(html);
 
-$('.ex-enable').click(function() {
-  var button = $('.selectpicker').closest('.bootstrap-select').find('button');
-  var html = button.html();
-  $('.example').prop('disabled', false);
-  $('.example').selectpicker('refresh');
-  button.html(html);
+  } else {
+    $(this).removeClass('active')
+    var button = $('.selectpicker').closest('.bootstrap-select').find('button');
+    var html = button.html();
+    $('select.example').prop('disabled', true);
+    $('p#warning').text('');
+    $('.bootstrap-select').removeClass('error');
+    $('select.example').selectpicker('refresh');
+    button.html(html);
+  }
 });
