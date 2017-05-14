@@ -4,11 +4,26 @@ Simple responsive component // bootstrap
 1. Wejdź na stronę https://ritaly.github.io/Months-component/  
 2. Aby włączyć formularz należy kliknąć przełącznik  
 
-a) Pole wyłączone - stan domyślny
+* Pole wyłączone - stan domyślny
 
 ![Wyłączone](/img/wylaczone.png)  
   
-b) Pole puste - po włączeniu komponentu
+* Puste - po włączeniu komponentu
 
 ![Puste](/img/puste.png)  
   
+* Błędne - po rozwinięciu listy, nie wybraniu miesiąca
+
+![Puste](/img/bledne.png)  
+
+* Wybrane - rozwinięcie listy i wybranie miesiąca
+
+![Puste](/img/wybrane.png) 
+
+* Wyłączne wypełnione - po wybraniu formularz wyłączony za pomocą przełącznika  
+
+![Puste](/img/wypelnione.png) 
+
+* Hover  
+
+![Puste](/img/hover.png) 
