@@ -1,2 +1,3 @@
 # Months-component
-Simple responsive component // bootstrap
+Simple responsive component // bootstrap  
+## Instrukcja uruchomienia 
