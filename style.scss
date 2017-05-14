@@ -195,6 +195,10 @@ div[disabled] {
   -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &:after {
     position: absolute;
     height: 28px;
