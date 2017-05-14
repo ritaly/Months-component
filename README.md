@@ -5,8 +5,10 @@ Simple responsive component // bootstrap
 2. Aby włączyć formularz należy kliknąć przełącznik  
 
 a) Pole wyłączone - stan domyślny
+
 ![Wyłączone](/img/wylaczone.png)  
   
 b) Pole puste - po włączeniu komponentu
+
 ![Puste](/img/puste.png)  
   
