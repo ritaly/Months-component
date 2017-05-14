@@ -17,7 +17,7 @@ $('.selectpicker').on('shown.bs.select', function(e) {
   $(this).closest('.bootstrap-select').addClass("error");
   $('p#warning').text('Wybierz miesiąc');
 });
-//wlacz-wylacz
+//switch
 $('.switch').on('click', function() {
   if ($(this).children().is(':checked')) {
     $(this).addClass('active');
